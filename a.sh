@@ -33,8 +33,9 @@ git clean -f
 ssh-keygen 
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/rsa
-pbcopy < ~/.ssh/rsa.pub
-ssh -T git@github.com
+git clone git@github.com:MaryamGazichi/for-test.git
+git remote add origin git@github.com:MaryamGazichi/for-test.git
+ssh -T git@github.com:MaryamGazichi/for-test.git
 
 # 6
 git checkout feature-branch
