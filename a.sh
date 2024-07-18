@@ -19,9 +19,11 @@ git add feature.txt
 git commit -m "Add feature.txt with initial content"
 
 # 3
-
-git blame -L '/def process_data/',+1 -- app.py
-git show abcdef123456
+touch app.py
+git add app.py
+git commit -m "add app.py"
+git blame app.py -L /process_data/
+git show <commit-id>
 
 # 4
 git clean -n
